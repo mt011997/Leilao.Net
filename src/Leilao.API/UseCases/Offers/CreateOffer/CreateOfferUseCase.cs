@@ -7,10 +7,10 @@ namespace Leilao.API.UseCases.Offers.CreateOffer;
 
 public class CreateOfferUseCase
 {
-    private readonly LoggedUser _loggedUser;
+    private readonly ILoggedUser _loggedUser;
     private readonly IOfferRepository _repository;
 
-    public CreateOfferUseCase(LoggedUser loggedUser, IOfferRepository repository)
+    public CreateOfferUseCase(ILoggedUser loggedUser, IOfferRepository repository)
     {
         _repository = repository;
         _loggedUser = loggedUser;
