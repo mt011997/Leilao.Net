@@ -18,7 +18,7 @@ public class AuctionRepository : IAuctionRepository
         return _dbContext
           .Auctions
           .Include(auction => auction.Items)
-          .FirstOrDefault(auction => today >= auction.Starts && today <= auction.Ends);
+          .FirstOrDefault(auction => today >= auction.Starts);
     }
 }
 

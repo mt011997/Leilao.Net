@@ -55,7 +55,7 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 builder.Services.AddDbContext<LeilaoDbContext>(options =>
 {
-    options.UseSqlite("Data Source=D:\\Downloads\\leilaoDbNLW.db");
+    options.UseSqlite(@"Data Source=D:\Downloads\leilaoDbNLW.db");
 });
 
 builder.Services.AddHttpContextAccessor();
